@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  webserver:
+    build: .
+    image: abobby/php-apache:latest
+    ports:
+      - '8080:80'
+    volumes:
+      - "./www:/var/www/html"
+      - "./config/vhost.conf:/etc/apache2/site-available/000-default.conf"
+
+    
