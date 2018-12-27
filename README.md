@@ -10,5 +10,5 @@ config/vhost.conf
 www
 
 ## Start/Stop Container
-make up OR docker-compose up -d
-make stop OR docker-compose stop
+### make up OR docker-compose up -d
+### make stop OR docker-compose stop
