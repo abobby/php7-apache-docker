@@ -19,17 +19,17 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get install -y libmcrypt-dev openssl curl git wget libssl-dev autoconf g++ make pkg-config \
     vim zip unzip
 
-# Install PHP 7.2 and PHP Extensions
-RUN apt-get install -y libapache2-mod-php7.2 php7.2 php7.2-cli php7.2-xdebug php7.2-mbstring php7.2-mysql php7.2-imagick \
-    php7.2-memcached php-pear imagemagick php7.2-dev php7.2-gd php7.2-json php7.2-curl php7.2-intl php7.2-mongodb php7.2-zip \
-    php7.2-xml
+# Install PHP 7.1 and PHP Extensions
+RUN apt-get install -y libapache2-mod-php7.1 php7.1 php7.1-cli php7.1-xdebug php7.1-mbstring php7.1-mysql php7.1-imagick \
+    php7.1-memcached php-pear imagemagick php7.1-dev php7.1-gd php7.1-json php7.1-curl php7.1-intl php7.1-mongodb php7.1-zip \
+    php7.1-xml
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN cd /etc/apache2/sites-available && a2ensite 000-default.conf && service apache2 restart
 
 # Enable apache mods
-RUN a2enmod php7.2
+RUN a2enmod php7.1
 RUN a2enmod rewrite
 
 # Update php.ini file, enable short tags <? ?> and error logging.
