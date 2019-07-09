@@ -1,7 +1,7 @@
-# Php 7.2, Apache Docker Image
-PHP 7.2, Apache, Common PHP Extensions Development Box with Docker
+# Php 7.1, Apache Docker Image
+PHP 7.1, Apache, Common PHP Extensions Development Box with Docker
 
-## PHP - 7.2, Apache 2
+## PHP - 7.1, Apache 2
 
 ## Virtualhost config file
 config/vhost.conf
